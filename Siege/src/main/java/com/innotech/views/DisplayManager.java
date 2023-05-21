@@ -3,8 +3,8 @@ package com.innotech.views;
 import javax.swing.*;
 
 public class DisplayManager {
-    private JFrame gameWindow = new JFrame("Siege");
-    private JPanel gameScreen = new MainScreen();
+    private final JFrame gameWindow = new JFrame("Siege");
+    private final MainScreen gameScreen = new MainScreen();
 
     public DisplayManager() {
         initializeWindow();
@@ -17,5 +17,9 @@ public class DisplayManager {
         gameWindow.pack();
         gameWindow.setLocationRelativeTo(null);
         gameWindow.setVisible(true);
+    }
+
+    public MainScreen getGameScreen() {
+        return gameScreen;
     }
 }

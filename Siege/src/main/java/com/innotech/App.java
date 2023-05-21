@@ -8,7 +8,7 @@ public class App
     public static void main( String[] args )
     {
         DisplayManager viewManager = new DisplayManager();
-        GameClock clock = new GameClock();
+        GameClock clock = new GameClock(viewManager.getGameScreen());
         clock.startGame();
     }
 }
