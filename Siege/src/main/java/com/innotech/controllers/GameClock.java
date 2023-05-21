@@ -14,6 +14,6 @@ public class GameClock implements Runnable {
     }
 
     public void run() {
-        //
+        System.out.println("Hello Siege!");
     }
 }
