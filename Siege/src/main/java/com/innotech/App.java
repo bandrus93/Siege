@@ -1,13 +1,14 @@
 package com.innotech;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import com.innotech.controllers.GameClock;
+import com.innotech.views.DisplayManager;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        DisplayManager viewManager = new DisplayManager();
+        GameClock clock = new GameClock();
+        clock.startGame();
     }
 }
