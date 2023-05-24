@@ -1,4 +1,4 @@
-package com.innotech.views;
+package com.innotech.map;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

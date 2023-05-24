@@ -1,6 +1,7 @@
 package com.innotech.views;
 
 import com.innotech.controllers.KeyHandler;
+import com.innotech.map.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +9,7 @@ import java.awt.*;
 public class MainScreen extends JPanel {
     private final int gridSize = 16;
     private final int gridScale = 1;
-    private final int maxSquareHeight = 64;
+    private final int maxSquareHeight = 56;
     private final KeyHandler inputHandler = new KeyHandler();
     private TileManager tileManager = new TileManager(this);
 
@@ -25,6 +26,12 @@ public class MainScreen extends JPanel {
     public int getGridSize() {
         return gridSize * gridScale;
     }
+
+    public int getTileSize() { return gridSize * gridScale * 2; }
+
+    public int getMaxSquareHeight() { return maxSquareHeight; }
+
+    public int getWindowHeightInPixels() { return maxSquareHeight * gridSize * gridScale; }
 
     public void update() {}
 
