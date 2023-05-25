@@ -1,18 +1,16 @@
 package com.innotech.map;
 
-import com.innotech.map.BackgroundTile;
 import com.innotech.views.MainScreen;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Objects;
 
 public class TileManager {
-    private MainScreen canvas;
-    private ArrayList<BackgroundTile> tileGrid = new ArrayList<>();
+    private final MainScreen canvas;
+    private final ArrayList<BackgroundTile> tileGrid = new ArrayList<>();
     private final MapCalculator calculator;
     private final MapGenerator map;
     public enum Tile {
@@ -29,8 +27,8 @@ public class TileManager {
 
     private void loadMap(byte[] mapData) {
         try {
-            for (int i = 0; i < mapData.length; i++) {
-                tileGrid.add(new BackgroundTile(ImageIO.read(Objects.requireNonNull(getClass().getResource(getTilePath(mapData[i]))))));
+            for (byte mapDatum : mapData) {
+                tileGrid.add(new BackgroundTile(ImageIO.read(Objects.requireNonNull(getClass().getResource(getTilePath(mapDatum))))));
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -49,10 +47,19 @@ public class TileManager {
     public void draw(Graphics2D graphics) {
         int nextTileIndex = 0;
         int tileSize = canvas.getTileSize();
+        int rowOffset = calculator.getOffsetLength();
+        int rowEnd = rowOffset + calculator.getSideLength();
         for (int i = 0; i < canvas.getWindowHeightInPixels(); i += tileSize) {
-            for (int j = 0; j < canvas.getWindowHeightInPixels(); j += tileSize) {
-                graphics.drawImage(tileGrid.get(nextTileIndex).getImage(),i,j, tileSize, tileSize, null);
+            for (int j = rowOffset; j < rowEnd; j += tileSize) {
+                graphics.drawImage(tileGrid.get(nextTileIndex).getImage(),j,i, tileSize, tileSize, null);
                 nextTileIndex++;
+            }
+            if (i < calculator.getOffsetLength()) {
+                rowOffset -= tileSize;
+                rowEnd += tileSize;
+            } else if (i >= (calculator.getOffsetLength() + calculator.getSideLength()) - canvas.getTileSize()) {
+                rowOffset += tileSize;
+                rowEnd -= tileSize;
             }
         }
     }

@@ -1,10 +1,5 @@
 package com.innotech.map;
 
-import com.innotech.views.MainScreen;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class MapGenerator {
     private final MapCalculator calculator;
     private final int totalTileSpaces;

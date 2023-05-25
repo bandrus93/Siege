@@ -11,12 +11,12 @@ public class MainScreen extends JPanel {
     private final int gridScale = 1;
     private final int maxSquareHeight = 56;
     private final KeyHandler inputHandler = new KeyHandler();
-    private TileManager tileManager = new TileManager(this);
+    private final TileManager tileManager = new TileManager(this);
 
     public MainScreen() {
         int mapScale = getGridSize();
         int mapSize = maxSquareHeight * mapScale;
-        setBackground(Color.BLACK);
+        this.setBackground(Color.BLACK);
         setPreferredSize(new Dimension(mapSize, mapSize));
         setDoubleBuffered(true);
         addKeyListener(inputHandler);
@@ -28,8 +28,6 @@ public class MainScreen extends JPanel {
     }
 
     public int getTileSize() { return gridSize * gridScale * 2; }
-
-    public int getMaxSquareHeight() { return maxSquareHeight; }
 
     public int getWindowHeightInPixels() { return maxSquareHeight * gridSize * gridScale; }
 
