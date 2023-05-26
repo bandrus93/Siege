@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="537c621a-517f-435d-bbe7-c9d5850cbbd0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/MapCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/MapCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/views/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/views/DisplayManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/views/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/views/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/grass.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/innotech/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/innotech/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/innotech/views/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/innotech/views/MainScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/grass.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bjand/Documents/Personal/Projects/Misc/Siege/Siege/Siege&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bjand/Documents/Personal/Projects/Misc/Siege/Siege/Siege/src/main/resources&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -48,6 +54,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.innotech.map" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">

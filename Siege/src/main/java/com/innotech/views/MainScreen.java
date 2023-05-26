@@ -16,7 +16,6 @@ public class MainScreen extends JPanel {
     public MainScreen() {
         int mapScale = getGridSize();
         int mapSize = maxSquareHeight * mapScale;
-        this.setBackground(Color.BLACK);
         setPreferredSize(new Dimension(mapSize, mapSize));
         setDoubleBuffered(true);
         addKeyListener(inputHandler);
@@ -36,6 +35,8 @@ public class MainScreen extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         Graphics2D graphics = (Graphics2D) g;
+        ((Graphics2D) g).setBackground(Color.BLACK);
+        g.setColor(Color.RED);
         tileManager.draw(graphics);
     }
 }

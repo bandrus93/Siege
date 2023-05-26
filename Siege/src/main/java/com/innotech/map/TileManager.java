@@ -15,7 +15,7 @@ public class TileManager {
     private final MapGenerator map;
     public enum Tile {
         WATER,
-        GRASS
+        TEMPERATE_GRASS
     }
 
     public TileManager(MainScreen gameWindow) {
@@ -62,5 +62,7 @@ public class TileManager {
                 rowEnd -= tileSize;
             }
         }
+        int mapCenterPoint = canvas.getWindowHeightInPixels() / 2;
+        graphics.fillRect(mapCenterPoint,mapCenterPoint,4,4);
     }
 }
