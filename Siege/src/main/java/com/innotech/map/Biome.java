@@ -21,15 +21,36 @@ public class Biome {
         WETLANDS
     }
 
+    public enum Terrain {
+        WATER,
+        ROCKS,
+        DIRT,
+        SAND,
+        GRASS,
+        SHRUBS,
+        CACTI,
+        TREES,
+        SNOW,
+        ICE
+    }
+
     private Biome(Climate climate, Ecology ecology) {
         this.climate = climate;
         this.ecology = ecology;
     }
 
     public static Biome getInstance() {
-        Climate climateZone = fetchClimate(generator.nextInt(Climate.values().length));
-        Ecology ecoZone = fetchEcology(generator.nextInt(Ecology.values().length));
+        Climate climateZone = Climate.TEMPERATE; //fetchClimate(generator.nextInt(Climate.values().length));
+        Ecology ecoZone = Ecology.PLAINS; //fetchEcology(generator.nextInt(Ecology.values().length));
         return new Biome(climateZone, ecoZone);
+    }
+
+    public Climate getClimate() {
+        return climate;
+    }
+
+    public Ecology getEcology() {
+        return ecology;
     }
 
     private static Climate fetchClimate(int index) {

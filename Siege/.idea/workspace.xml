@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="537c621a-517f-435d-bbe7-c9d5850cbbd0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/tile/BackgroundTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/BackgroundTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/Biome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/Biome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/MapCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/MapGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/MapGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/views/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/views/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/temperate_grass.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map/terrain/temperate/plains/grass.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/innotech/views/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/innotech/views/MainScreen.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,22 +42,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bjand/Documents/Personal/Projects/Misc/Siege/Siege/Siege/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/bjand/Documents/Personal/Projects/Misc/Siege/Siege/Siege/src/main/resources/map/terrain/subarctic/wetlands",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.innotech.map" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\wetlands" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\coastal" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\rugged" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\arboreal" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\arctic\plains" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\coastal" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\plains" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\tropical\arboreal" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subtropical\wetlands" />
     </key>
   </component>
   <component name="RunManager">

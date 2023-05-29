@@ -1,19 +1,18 @@
 package com.innotech.map;
 
-public class MapGenerator {
-    private final MapCalculator calculator;
-    private final int totalTileSpaces;
+import com.innotech.views.MainScreen;
 
-    public MapGenerator(MapCalculator calculator) {
-        this.calculator = calculator;
-        totalTileSpaces = calculator.getTotalTileSpaces();
+public class MapGenerator {
+
+    public MapGenerator() {
+
     }
 
-    public byte[] generate() {
-        byte[] mapData = new byte[totalTileSpaces];
-        for (int i = 0; i < totalTileSpaces; i++) {
-            mapData[i] = 1;
-        }
-        return mapData;
+    public static PlayerMap getPlayerMapInstance(MainScreen canvas) {
+        PlayerMap map = new PlayerMap(canvas);
+        map.biome = Biome.getInstance();
+        map.layoutManager = new TileManager(map);
+        map.layoutManager.loadMap(map.generate());
+        return map;
     }
 }
