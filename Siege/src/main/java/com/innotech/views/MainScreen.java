@@ -6,6 +6,7 @@ import com.innotech.map.PlayerMap;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class MainScreen extends JPanel {
     private final int gridSize = 16;
@@ -14,7 +15,7 @@ public class MainScreen extends JPanel {
     private final KeyHandler inputHandler = new KeyHandler();
     private final PlayerMap map = MapGenerator.getPlayerMapInstance(this);
 
-    public MainScreen() {
+    public MainScreen() throws IOException {
         int mapScale = getGridSize();
         int mapSize = maxSquareHeight * mapScale;
         setPreferredSize(new Dimension(mapSize, mapSize));

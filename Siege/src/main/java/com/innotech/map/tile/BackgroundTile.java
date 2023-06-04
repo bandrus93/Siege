@@ -1,6 +1,6 @@
 package com.innotech.map.tile;
 
-import com.innotech.map.Biome;
+import com.innotech.map.biome.Biome;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

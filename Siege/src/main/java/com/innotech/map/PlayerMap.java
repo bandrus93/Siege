@@ -3,11 +3,12 @@ package com.innotech.map;
 import com.innotech.views.MainScreen;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class PlayerMap extends Map {
     private final int totalTileSpaces;
 
-    public PlayerMap(MainScreen canvas) {
+    public PlayerMap(MainScreen canvas) throws IOException {
         super(canvas);
         totalTileSpaces = canvas.getTotalTileSpaces();
     }

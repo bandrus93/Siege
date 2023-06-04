@@ -1,6 +1,6 @@
-package com.innotech.map;
+package com.innotech.map.tile;
 
-import com.innotech.map.tile.BackgroundTile;
+import com.innotech.map.Map;
 
 public class TileManager {
     private final Map map;

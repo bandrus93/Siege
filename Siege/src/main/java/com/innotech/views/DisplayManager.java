@@ -2,10 +2,19 @@ package com.innotech.views;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class DisplayManager {
     private final JFrame gameWindow = new JFrame("Siege");
-    private final MainScreen gameScreen = new MainScreen();
+    private final MainScreen gameScreen;
+
+    {
+        try {
+            gameScreen = new MainScreen();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public DisplayManager() {
         initializeWindow();
