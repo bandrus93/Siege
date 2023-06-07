@@ -1,7 +1,7 @@
 package com.innotech.map;
 
 public class PerlinNoise2D {
-    private static double noise(double x, double y) {
+    public static double noise(double x, double y) {
         int xi = (int) Math.floor(x) & 255;
         int yi = (int) Math.floor(y) & 255;
         int g1 = p[p[xi] + yi];

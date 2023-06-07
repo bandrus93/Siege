@@ -50,6 +50,10 @@ public class Biome {
         return ecology;
     }
 
+    public TexturePack getData() {
+        return data;
+    }
+
     public static Climate fetchClimate(int index) {
         for (Climate candidate : Climate.values()) {
             if (candidate.ordinal() == index) return candidate;

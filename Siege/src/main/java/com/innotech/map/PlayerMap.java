@@ -1,9 +1,13 @@
 package com.innotech.map;
 
+import com.innotech.map.data.Texture;
+import com.innotech.map.data.TexturePack;
 import com.innotech.views.MainScreen;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PlayerMap extends Map {
     private final int totalTileSpaces;
@@ -35,11 +39,66 @@ public class PlayerMap extends Map {
     }
 
     public byte[] generate() {
+        TexturePack texturePack = biome.getData();
+        int offsetTiles = canvas.getOffsetLength() / canvas.getTileSize();
+        int rowEnd = (canvas.getSideLength() / canvas.getTileSize()) + offsetTiles;
+        int rowBegin = offsetTiles + 1;
+        List<SeedRegion> tileRegions = new ArrayList<>();
+        SeedRegion activeRegion;
+        int xRaster = rowBegin;
+        int yRaster = canvas.getWindowHeightInPixels() / canvas.getTileSize();
         byte[] mapData = new byte[totalTileSpaces];
         for (int i = 0; i < totalTileSpaces; i++) {
-            mapData[i] = 4;
+            if ((activeRegion = SeedRegion.isInBounds(tileRegions,xRaster,yRaster)) != null) {
+                double noiseValue = PerlinNoise2D.noise(xRaster,yRaster);
+                mapData[i] = noiseValue <= activeRegion.seedHeight && noiseValue >= activeRegion.seedHeight - activeRegion.seedTile.getSeedValue()
+                        ? activeRegion.seedTile.getByteValue()
+                        : texturePack.getDefaultTexture().getByteValue();
+            } else {
+                Texture selected = texturePack.getRandomTexture();
+                mapData[i] = selected.getByteValue();
+                if (selected.getSeedValue() < 2) {
+                    double altitude = PerlinNoise2D.noise(xRaster,yRaster);
+                    tileRegions.add(new SeedRegion(selected,xRaster,yRaster,altitude));
+                }
+            }
+            xRaster++;
+            if (yRaster > offsetTiles + (canvas.getSideLength() / canvas.getTileSize()) && xRaster > rowEnd) {
+                yRaster--;
+                rowBegin--;
+                rowEnd++;
+                xRaster = rowBegin;
+            } else if (yRaster <= offsetTiles + 1 && xRaster > rowEnd) {
+                yRaster--;
+                rowBegin++;
+                rowEnd--;
+                xRaster = rowBegin;
+            }
         }
         return mapData;
+    }
+
+    private static class SeedRegion {
+        int xBegin;
+        int xEnd;
+        int yEnd;
+        Texture seedTile;
+        double seedHeight;
+
+        public SeedRegion(Texture toTile, int xBegin, int yBegin, double altitude) {
+            this.xBegin = xBegin;
+            seedTile = toTile;
+            seedHeight = altitude;
+            xEnd = xBegin + toTile.getSeedRadius();
+            yEnd = yBegin - toTile.getSeedRadius();
+        }
+
+        public static SeedRegion isInBounds(List<SeedRegion> activeRegions, int x, int y) {
+            for (SeedRegion region : activeRegions) {
+                if (region.xBegin <= x && region.xEnd >= x && region.yEnd <= y) return region;
+            }
+            return null;
+        }
     }
 
 }

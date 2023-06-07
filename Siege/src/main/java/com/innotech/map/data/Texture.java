@@ -1,5 +1,7 @@
 package com.innotech.map.data;
 
+import java.util.Comparator;
+
 public class Texture {
     private byte byteValue;
     private int weight;
