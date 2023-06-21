@@ -6,7 +6,7 @@ public class Texture {
     private byte byteValue;
     private int weight;
     private double seedValue;
-    private int seedRadius;
+    private double seedRadius;
 
     public Texture() {}
 
@@ -34,11 +34,12 @@ public class Texture {
         this.seedValue = seedValue;
     }
 
-    public int getSeedRadius() {
+    public double getSeedRadius() {
         return seedRadius;
     }
 
     public void setSeedRadius(int seedRadius) {
         this.seedRadius = seedRadius;
     }
+
 }

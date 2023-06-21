@@ -5,6 +5,7 @@ import com.innotech.map.tile.TileManager;
 import com.innotech.views.MainScreen;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class MapGenerator {
 
@@ -15,8 +16,8 @@ public class MapGenerator {
     public static PlayerMap getPlayerMapInstance(MainScreen canvas) throws IOException {
         PlayerMap map = new PlayerMap(canvas);
         map.biome = new Biome.Generator()
-                .setClimate(Biome.Climate.TEMPERATE)
-                .setEcology(Biome.Ecology.PLAINS)
+                .setClimate(Biome.fetchClimate(new Random().nextInt(Biome.Climate.values().length)))
+                .setEcology(Biome.fetchEcology(new Random().nextInt(Biome.Ecology.values().length)))
                 .configureTextures(map.data.getTexturePacks())
                 .generate();
         map.layoutManager = new TileManager(map);

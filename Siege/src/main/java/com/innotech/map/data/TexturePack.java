@@ -1,7 +1,5 @@
 package com.innotech.map.data;
 
-import com.innotech.map.biome.Biome;
-
 import java.util.*;
 
 public class TexturePack implements Comparator<Texture> {

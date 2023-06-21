@@ -59,7 +59,8 @@ public class PlayerMap extends Map {
                 mapData[i] = selected.getByteValue();
                 if (selected.getSeedValue() < 2) {
                     double altitude = PerlinNoise2D.noise(xRaster,yRaster);
-                    tileRegions.add(new SeedRegion(selected,xRaster,yRaster,altitude));
+                    SeedRegion toSeed = new SeedRegion(selected,xRaster,yRaster,altitude, canvas.getWindowHeightInPixels());
+                    if (!toSeed.isOverlapping(tileRegions)) tileRegions.add(toSeed);
                 }
             }
             xRaster++;
@@ -85,12 +86,20 @@ public class PlayerMap extends Map {
         Texture seedTile;
         double seedHeight;
 
-        public SeedRegion(Texture toTile, int xBegin, int yBegin, double altitude) {
+        public SeedRegion(Texture toTile, int xBegin, int yBegin, double altitude, int screenWidth) {
+            int tileRadius = (int) Math.round(toTile.getSeedRadius() * screenWidth);
             this.xBegin = xBegin;
             seedTile = toTile;
             seedHeight = altitude;
-            xEnd = xBegin + toTile.getSeedRadius();
-            yEnd = yBegin - toTile.getSeedRadius();
+            xEnd = xBegin + tileRadius;
+            yEnd = yBegin - tileRadius;
+        }
+
+        public boolean isOverlapping(List<SeedRegion> activeRegions) {
+            for (SeedRegion region : activeRegions) {
+                if (xEnd >= region.xBegin) return true;
+            }
+            return false;
         }
 
         public static SeedRegion isInBounds(List<SeedRegion> activeRegions, int x, int y) {

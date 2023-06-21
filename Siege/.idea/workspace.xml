@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="537c621a-517f-435d-bbe7-c9d5850cbbd0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/PerlinNoise2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/PerlinNoise2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/MapGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/MapGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/PlayerMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/PlayerMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/biome/Biome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/biome/Biome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/data/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/data/Texture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innotech/map/data/TexturePack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innotech/map/data/TexturePack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/map/terrain/textures/textures.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map/terrain/textures/textures.txt" afterDir="false" />
@@ -40,26 +39,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bjand/Documents/Personal/Projects/Misc/Siege/Siege/Siege/src/main/resources/map/terrain/temperate/plains&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/bjand/Documents/Personal/Projects/Misc/Siege/Siege/Siege/src/main/resources/map/terrain/tropical/rugged",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.innotech.map" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\temperate\plains" />
-      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\temperate\coastal" />
-      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\temperate\rugged" />
-      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\temperate\arboreal" />
-      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\coastal" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\tropical\rugged" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\tropical\coastal" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\tropical\plains" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subtropical\coastal" />
+      <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subtropical\rugged" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bjand\Documents\Personal\Projects\Misc\Siege\Siege\Siege\src\main\resources\map\terrain\subarctic\coastal" />
